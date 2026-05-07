@@ -1,7 +1,7 @@
-﻿Public Class Form3
+Public Class FormMerk
     Private selectedKodeMerk As String = String.Empty
 
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FormMerk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dgvLaptops.EnableHeadersVisualStyles = False
         dgvLaptops.ColumnHeadersDefaultCellStyle.BackColor = Color.Red
         dgvLaptops.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
@@ -85,12 +85,18 @@
     End Sub
 
     Private Sub btnMenuProduk_Click(sender As Object, e As EventArgs) Handles btnMenuProduk.Click
-        Form2.Show()
+        FormProduk.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
+        Dim transaksiForm As New FormTransaksi()
+        transaksiForm.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Form1.Show()
+        FormLogin.Show()
         Me.Close()
     End Sub
 

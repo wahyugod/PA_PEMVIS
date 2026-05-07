@@ -1,0 +1,36 @@
+Imports System.Drawing
+Imports System.Windows.Forms
+
+Public Class FormRegister
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        If ValidationModule.IsEmpty(txtUsername.Text, txtPassword.Text) Then
+            MessageBox.Show("Username dan Password tidak boleh kosong.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        If DataModule.RegisterUser(txtUsername.Text, txtPassword.Text) Then
+            MessageBox.Show("Registrasi berhasil. Silakan login.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim loginForm As New FormLogin()
+            loginForm.Show()
+            Me.Close()
+        Else
+            MessageBox.Show("Registrasi gagal. Username mungkin sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub btnBackToLogin_Click(sender As Object, e As EventArgs) Handles btnBackToLogin.Click
+        Dim loginForm As New FormLogin()
+        loginForm.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnRegister.PerformClick()
+        End If
+    End Sub
+
+    Private Sub Guna2HtmlLabel3_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel3.Click
+
+    End Sub
+End Class

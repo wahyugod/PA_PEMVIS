@@ -1,5 +1,5 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form3
+Partial Class FormMerk
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -41,6 +41,7 @@ Partial Class Form3
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         pnlSidebar = New Guna.UI2.WinForms.Guna2Panel()
         btnMerk = New Guna.UI2.WinForms.Guna2Button()
+        btnTransaksi = New Guna.UI2.WinForms.Guna2Button()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -66,6 +67,7 @@ Partial Class Form3
         ' pnlSidebar
         ' 
         pnlSidebar.Controls.Add(btnMerk)
+        pnlSidebar.Controls.Add(btnTransaksi)
         pnlSidebar.Controls.Add(Guna2HtmlLabel3)
         pnlSidebar.Controls.Add(Guna2HtmlLabel2)
         pnlSidebar.Controls.Add(Guna2HtmlLabel1)
@@ -94,6 +96,20 @@ Partial Class Form3
         btnMerk.Size = New Size(210, 45)
         btnMerk.TabIndex = 6
         btnMerk.Text = "Merk"
+        ' 
+        ' btnTransaksi
+        ' 
+        btnTransaksi.BorderRadius = 8
+        btnTransaksi.CustomizableEdges = CustomizableEdges1
+        btnTransaksi.FillColor = Color.FromArgb(CByte(45), CByte(53), CByte(73))
+        btnTransaksi.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
+        btnTransaksi.ForeColor = Color.White
+        btnTransaksi.Location = New Point(48, 304)
+        btnTransaksi.Name = "btnTransaksi"
+        btnTransaksi.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnTransaksi.Size = New Size(210, 45)
+        btnTransaksi.TabIndex = 7
+        btnTransaksi.Text = "Transaksi"
         ' 
         ' Guna2HtmlLabel3
         ' 
@@ -350,7 +366,7 @@ Partial Class Form3
         btnSave.TabIndex = 3
         btnSave.Text = "Save"
         ' 
-        ' Form3
+        ' FormMerk
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
@@ -359,9 +375,9 @@ Partial Class Form3
         Controls.Add(pnlMain)
         Controls.Add(pnlSidebar)
         FormBorderStyle = FormBorderStyle.None
-        Name = "Form3"
+        Name = "FormMerk"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form3"
+        Text = "FormMerk"
         pnlSidebar.ResumeLayout(False)
         pnlSidebar.PerformLayout()
         pnlMain.ResumeLayout(False)
@@ -389,4 +405,5 @@ Partial Class Form3
     Friend WithEvents btnMerk As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnTransaksi As Guna.UI2.WinForms.Guna2Button
 End Class

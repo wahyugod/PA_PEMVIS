@@ -1,7 +1,7 @@
-﻿Imports System.Drawing
+Imports System.Drawing
 Imports System.Windows
 
-Public Class Form1
+Public Class FormLogin
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If ValidationModule.IsEmpty(txtUsername.Text, txtPassword.Text) Then
             MessageBox.Show("Username dan Password tidak boleh kosong.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -9,9 +9,15 @@ Public Class Form1
         End If
 
         If DataModule.LoginUser(txtUsername.Text, txtPassword.Text) Then
-            Dim dashboard As New Form2()
-            dashboard.Show()
-            Me.Hide()
+            If DataModule.LoggedInRole = "admin" Then
+                Dim dashboard As New FormProduk()
+                dashboard.Show()
+                Me.Hide()
+            Else
+                Dim memberForm As New FormMember()
+                memberForm.Show()
+                Me.Hide()
+            End If
         Else
             MessageBox.Show("Kredensial tidak valid. Silakan coba lagi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -21,6 +27,12 @@ Public Class Form1
         If e.KeyCode = Keys.Enter Then
             btnLogin.PerformClick()
         End If
+    End Sub
+
+    Private Sub btnGoToRegister_Click(sender As Object, e As EventArgs) Handles btnGoToRegister.Click
+        Dim registerForm As New FormRegister()
+        registerForm.Show()
+        Me.Hide()
     End Sub
 
 End Class

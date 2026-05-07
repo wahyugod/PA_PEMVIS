@@ -1,9 +1,7 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class FormRegister
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -14,12 +12,8 @@ Partial Class Form1
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.
-    'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -30,12 +24,14 @@ Partial Class Form1
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
-        btnLogin = New Guna.UI2.WinForms.Guna2Button()
+        btnRegister = New Guna.UI2.WinForms.Guna2Button()
+        btnBackToLogin = New Guna.UI2.WinForms.Guna2Button()
         pnlCard = New Guna.UI2.WinForms.Guna2Panel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -49,14 +45,8 @@ Partial Class Form1
         txtUsername.BorderThickness = 0
         txtUsername.CustomizableEdges = CustomizableEdges1
         txtUsername.DefaultText = ""
-        txtUsername.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtUsername.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtUsername.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtUsername.FillColor = Color.FromArgb(CByte(239), CByte(244), CByte(255))
-        txtUsername.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtUsername.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
-        txtUsername.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtUsername.Location = New Point(48, 168)
         txtUsername.Name = "txtUsername"
         txtUsername.PlaceholderText = "Username"
@@ -70,14 +60,8 @@ Partial Class Form1
         txtPassword.BorderThickness = 0
         txtPassword.CustomizableEdges = CustomizableEdges3
         txtPassword.DefaultText = ""
-        txtPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        txtPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        txtPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtPassword.FillColor = Color.FromArgb(CByte(239), CByte(244), CByte(255))
-        txtPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtPassword.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
-        txtPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtPassword.Location = New Point(48, 248)
         txtPassword.Name = "txtPassword"
         txtPassword.PasswordChar = "•"c
@@ -87,41 +71,51 @@ Partial Class Form1
         txtPassword.Size = New Size(288, 38)
         txtPassword.TabIndex = 1
         ' 
-        ' btnLogin
+        ' btnRegister
         ' 
-        btnLogin.BorderRadius = 8
-        btnLogin.CustomizableEdges = CustomizableEdges5
-        btnLogin.DisabledState.BorderColor = Color.DarkGray
-        btnLogin.DisabledState.CustomBorderColor = Color.DarkGray
-        btnLogin.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnLogin.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnLogin.FillColor = Color.FromArgb(CByte(45), CByte(53), CByte(73))
-        btnLogin.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
-        btnLogin.ForeColor = Color.White
-        btnLogin.Location = New Point(48, 338)
-        btnLogin.Name = "btnLogin"
-        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnLogin.Size = New Size(288, 45)
-        btnLogin.TabIndex = 2
-        btnLogin.Text = "Login"
+        btnRegister.BorderRadius = 8
+        btnRegister.CustomizableEdges = CustomizableEdges5
+        btnRegister.FillColor = Color.FromArgb(CByte(45), CByte(53), CByte(73))
+        btnRegister.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
+        btnRegister.ForeColor = Color.White
+        btnRegister.Location = New Point(48, 336)
+        btnRegister.Name = "btnRegister"
+        btnRegister.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnRegister.Size = New Size(288, 45)
+        btnRegister.TabIndex = 2
+        btnRegister.Text = "Register"
+        ' 
+        ' btnBackToLogin
+        ' 
+        btnBackToLogin.BorderRadius = 8
+        btnBackToLogin.CustomizableEdges = CustomizableEdges7
+        btnBackToLogin.FillColor = Color.Transparent
+        btnBackToLogin.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Underline)
+        btnBackToLogin.ForeColor = Color.FromArgb(CByte(45), CByte(53), CByte(73))
+        btnBackToLogin.Location = New Point(48, 408)
+        btnBackToLogin.Name = "btnBackToLogin"
+        btnBackToLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnBackToLogin.Size = New Size(288, 25)
+        btnBackToLogin.TabIndex = 4
+        btnBackToLogin.Text = "Sudah punya akun? Login"
         ' 
         ' pnlCard
         ' 
         pnlCard.BackColor = Color.Transparent
         pnlCard.BorderRadius = 12
         pnlCard.Controls.Add(Guna2HtmlLabel2)
-        pnlCard.Controls.Add(Guna2HtmlLabel7)
         pnlCard.Controls.Add(Guna2HtmlLabel3)
         pnlCard.Controls.Add(Guna2HtmlLabel4)
         pnlCard.Controls.Add(Guna2HtmlLabel1)
         pnlCard.Controls.Add(txtUsername)
-        pnlCard.Controls.Add(btnLogin)
+        pnlCard.Controls.Add(btnRegister)
+        pnlCard.Controls.Add(btnBackToLogin)
         pnlCard.Controls.Add(txtPassword)
-        pnlCard.CustomizableEdges = CustomizableEdges7
+        pnlCard.CustomizableEdges = CustomizableEdges9
         pnlCard.FillColor = Color.White
         pnlCard.Location = New Point(456, 232)
         pnlCard.Name = "pnlCard"
-        pnlCard.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        pnlCard.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         pnlCard.Size = New Size(377, 456)
         pnlCard.TabIndex = 3
         ' 
@@ -135,25 +129,15 @@ Partial Class Form1
         Guna2HtmlLabel2.TabIndex = 3
         Guna2HtmlLabel2.Text = "Password"
         ' 
-        ' Guna2HtmlLabel7
-        ' 
-        Guna2HtmlLabel7.BackColor = Color.Transparent
-        Guna2HtmlLabel7.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
-        Guna2HtmlLabel7.Location = New Point(80, 416)
-        Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Guna2HtmlLabel7.Size = New Size(220, 18)
-        Guna2HtmlLabel7.TabIndex = 3
-        Guna2HtmlLabel7.Text = "Hint: user=admin, pass=admin123"
-        ' 
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
         Guna2HtmlLabel3.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
-        Guna2HtmlLabel3.Location = New Point(48, 76)
+        Guna2HtmlLabel3.Location = New Point(112, 72)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(290, 18)
+        Guna2HtmlLabel3.Size = New Size(150, 18)
         Guna2HtmlLabel3.TabIndex = 3
-        Guna2HtmlLabel3.Text = "Masukan Kredensial Untuk Mengakses Sistem"
+        Guna2HtmlLabel3.Text = "Buat Akun Member Baru"
         ' 
         ' Guna2HtmlLabel4
         ' 
@@ -169,11 +153,11 @@ Partial Class Form1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("JetBrains Mono", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel1.Location = New Point(104, 36)
+        Guna2HtmlLabel1.Location = New Point(128, 40)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(171, 33)
+        Guna2HtmlLabel1.Size = New Size(115, 33)
         Guna2HtmlLabel1.TabIndex = 3
-        Guna2HtmlLabel1.Text = "Welcome Back"
+        Guna2HtmlLabel1.Text = "Register"
         ' 
         ' Guna2HtmlLabel5
         ' 
@@ -195,9 +179,9 @@ Partial Class Form1
         Guna2HtmlLabel6.TabIndex = 3
         Guna2HtmlLabel6.Text = "Sistem Manajemen Produk Laptop"
         ' 
-        ' Form1
+        ' FormRegister
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(255))
         ClientSize = New Size(1280, 800)
@@ -205,9 +189,9 @@ Partial Class Form1
         Controls.Add(Guna2HtmlLabel6)
         Controls.Add(Guna2HtmlLabel5)
         FormBorderStyle = FormBorderStyle.None
-        Name = "Form1"
+        Name = "FormRegister"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form1"
+        Text = "FormRegister"
         pnlCard.ResumeLayout(False)
         pnlCard.PerformLayout()
         ResumeLayout(False)
@@ -216,7 +200,8 @@ Partial Class Form1
 
     Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnRegister As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnBackToLogin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents pnlCard As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -224,6 +209,5 @@ Partial Class Form1
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class

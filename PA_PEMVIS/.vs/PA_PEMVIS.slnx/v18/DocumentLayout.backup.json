@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\PA_PEMVIS\\PA_PEMVIS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|d:\\pa_pemvis\\pa_pemvis\\winformsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|solutionrelative:winformsapp1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|d:\\pa_pemvis\\pa_pemvis\\winformsapp1\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|solutionrelative:winformsapp1\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|d:\\pa_pemvis\\pa_pemvis\\winformsapp1\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|solutionrelative:winformsapp1\\form2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|d:\\pa_pemvis\\pa_pemvis\\winformsapp1\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|solutionrelative:winformsapp1\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|d:\\pa_pemvis\\pa_pemvis\\winformsapp1\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|solutionrelative:winformsapp1\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|d:\\pa_pemvis\\pa_pemvis\\winformsapp1\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{ED73E150-FF09-BDF8-8134-EB9916F8D768}|WinFormsApp1\\WinFormsApp1.vbproj|solutionrelative:winformsapp1\\formregister.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,26 +30,52 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form2.vb [Design]",
-              "DocumentMoniker": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\Form2.vb",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Form2.vb",
-              "ToolTip": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\Form2.vb [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Form2.vb [Design]",
+              "DocumentIndex": 3,
+              "Title": "FormRegister.vb",
+              "DocumentMoniker": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormRegister.vb",
+              "RelativeDocumentMoniker": "WinFormsApp1\\FormRegister.vb",
+              "ToolTip": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormRegister.vb",
+              "RelativeToolTip": "WinFormsApp1\\FormRegister.vb",
+              "ViewState": "AgIAABQAAAAAAAAAAAA5wCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-06T11:34:20.077Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-07T04:18:42.086Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\Form1.vb",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Form1.vb",
-              "ToolTip": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\Form1.vb [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Form1.vb [Design]",
+              "Title": "FormRegister.vb [Design]",
+              "DocumentMoniker": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormRegister.vb",
+              "RelativeDocumentMoniker": "WinFormsApp1\\FormRegister.vb",
+              "ToolTip": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormRegister.vb [Design]",
+              "RelativeToolTip": "WinFormsApp1\\FormRegister.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-05-06T11:33:48.971Z",
+              "WhenOpened": "2026-05-07T04:18:31.799Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormLogin.vb",
+              "DocumentMoniker": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormLogin.vb",
+              "RelativeDocumentMoniker": "WinFormsApp1\\FormLogin.vb",
+              "ToolTip": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormLogin.vb",
+              "RelativeToolTip": "WinFormsApp1\\FormLogin.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-07T03:58:29.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormLogin.vb [Design]",
+              "DocumentMoniker": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormLogin.vb",
+              "RelativeDocumentMoniker": "WinFormsApp1\\FormLogin.vb",
+              "ToolTip": "D:\\PA_PEMVIS\\PA_PEMVIS\\WinFormsApp1\\FormLogin.vb [Design]",
+              "RelativeToolTip": "WinFormsApp1\\FormLogin.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-07T03:58:34.624Z",
               "EditorCaption": " [Design]"
             }
           ]

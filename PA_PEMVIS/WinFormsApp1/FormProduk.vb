@@ -1,7 +1,7 @@
-﻿Public Class Form2
+Public Class FormProduk
     Private selectedLaptopId As Integer?
 
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FormProduk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SwitchPanel(pnlProduk)
         LoadMerkDropdown()
         RefreshData()
@@ -32,13 +32,13 @@
     End Sub
 
     Private Sub btnMerk_Click(sender As Object, e As EventArgs) Handles btnMerk.Click
-        Form3.Show()
+        FormMerk.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Form1.Show()
-        Form1.txtPassword.Clear()
+        FormLogin.Show()
+        FormLogin.txtPassword.Clear()
         Me.Close()
     End Sub
 
@@ -142,5 +142,11 @@
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm()
+    End Sub
+
+    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
+        Dim transaksiForm As New FormTransaksi()
+        transaksiForm.Show()
+        Me.Hide()
     End Sub
 End Class

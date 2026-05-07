@@ -1,7 +1,7 @@
-﻿Imports System.Drawing
+Imports System.Drawing
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form2
+Partial Class FormProduk
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -65,6 +65,7 @@ Partial Class Form2
         Label4 = New Label()
         btnLogout = New Guna.UI2.WinForms.Guna2Button()
         btnMerk = New Guna.UI2.WinForms.Guna2Button()
+        btnTransaksi = New Guna.UI2.WinForms.Guna2Button()
         btnMenuProduk = New Guna.UI2.WinForms.Guna2Button()
         pnlDashboard = New Guna.UI2.WinForms.Guna2Panel()
         cardStok = New Guna.UI2.WinForms.Guna2Panel()
@@ -106,6 +107,7 @@ Partial Class Form2
         pnlSidebar.Controls.Add(Label4)
         pnlSidebar.Controls.Add(btnLogout)
         pnlSidebar.Controls.Add(btnMerk)
+        pnlSidebar.Controls.Add(btnTransaksi)
         pnlSidebar.Controls.Add(btnMenuProduk)
         pnlSidebar.CustomizableEdges = CustomizableEdges7
         pnlSidebar.Dock = DockStyle.Left
@@ -172,6 +174,20 @@ Partial Class Form2
         btnMerk.Size = New Size(210, 45)
         btnMerk.TabIndex = 1
         btnMerk.Text = "Merk"
+        ' 
+        ' btnTransaksi
+        ' 
+        btnTransaksi.BorderRadius = 8
+        btnTransaksi.CustomizableEdges = CustomizableEdges3
+        btnTransaksi.FillColor = Color.FromArgb(CByte(45), CByte(53), CByte(73))
+        btnTransaksi.Font = New Font("JetBrains Mono", 8.999999F, FontStyle.Bold)
+        btnTransaksi.ForeColor = Color.White
+        btnTransaksi.Location = New Point(48, 304)
+        btnTransaksi.Name = "btnTransaksi"
+        btnTransaksi.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnTransaksi.Size = New Size(210, 45)
+        btnTransaksi.TabIndex = 1
+        btnTransaksi.Text = "Transaksi"
         ' 
         ' btnMenuProduk
         ' 
@@ -538,7 +554,7 @@ Partial Class Form2
         dgvLaptops.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dgvLaptops.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
-        ' Form2
+        ' FormProduk
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -548,7 +564,7 @@ Partial Class Form2
         Controls.Add(pnlDashboard)
         Controls.Add(pnlSidebar)
         FormBorderStyle = FormBorderStyle.None
-        Name = "Form2"
+        Name = "FormProduk"
         StartPosition = FormStartPosition.CenterScreen
         Text = "WahyuTech"
         pnlSidebar.ResumeLayout(False)
@@ -599,4 +615,5 @@ Partial Class Form2
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents btnMerk As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnTransaksi As Guna.UI2.WinForms.Guna2Button
 End Class

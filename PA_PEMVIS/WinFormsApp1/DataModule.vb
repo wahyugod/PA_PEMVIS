@@ -1,19 +1,94 @@
-﻿Imports MySqlConnector
+Imports MySqlConnector
 
 Module DataModule
+    Public LoggedInUserId As Integer
+    Public LoggedInRole As String
+
     Public Function LoginUser(username As String, password As String) As Boolean
         Dim isValid As Boolean = False
         Using conn = GetConnection()
-            Dim query As String = "SELECT COUNT(*) FROM users WHERE username=@user AND password=@pass"
+            Dim query As String = "SELECT id, role FROM users WHERE username=@user AND password=@pass"
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@user", username)
                 cmd.Parameters.AddWithValue("@pass", password)
                 conn.Open()
-                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-                If count > 0 Then isValid = True
+                Using reader = cmd.ExecuteReader()
+                    If reader.Read() Then
+                        LoggedInUserId = Convert.ToInt32(reader("id"))
+                        LoggedInRole = reader("role").ToString()
+                        isValid = True
+                    End If
+                End Using
             End Using
         End Using
         Return isValid
+    End Function
+
+    Public Function RegisterUser(username As String, password As String) As Boolean
+        Try
+            Using conn = GetConnection()
+                Dim query As String = "INSERT INTO users (username, password, role) VALUES (@user, @pass, 'member')"
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@user", username)
+                    cmd.Parameters.AddWithValue("@pass", password)
+                    conn.Open()
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function GetAvailableLaptops() As DataTable
+        Dim dt As New DataTable()
+        Using conn = GetConnection()
+            Dim query As String = "SELECT l.id AS ID, m.namaMerk AS Merk, l.nama AS Nama, l.harga AS Harga, l.stok AS Stok FROM laptops l LEFT JOIN merk m ON l.kodeMerk = m.kodeMerk WHERE l.stok > 0"
+            Using cmd As New MySqlCommand(query, conn)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    Public Function BuyLaptop(userId As Integer, laptopId As Integer, jumlah As Integer, totalHarga As Decimal) As Boolean
+        Try
+            Using conn = GetConnection()
+                conn.Open()
+                Using transaction = conn.BeginTransaction()
+                    Try
+                        ' Insert transaction
+                        Dim queryInsert As String = "INSERT INTO transaksi (id_user, id_laptop, jumlah_beli, total_harga) VALUES (@userId, @laptopId, @jumlah, @totalHarga)"
+                        Using cmdInsert As New MySqlCommand(queryInsert, conn, transaction)
+                            cmdInsert.Parameters.AddWithValue("@userId", userId)
+                            cmdInsert.Parameters.AddWithValue("@laptopId", laptopId)
+                            cmdInsert.Parameters.AddWithValue("@jumlah", jumlah)
+                            cmdInsert.Parameters.AddWithValue("@totalHarga", totalHarga)
+                            cmdInsert.ExecuteNonQuery()
+                        End Using
+
+                        ' Update stock
+                        Dim queryUpdate As String = "UPDATE laptops SET stok = stok - @jumlah WHERE id = @laptopId"
+                        Using cmdUpdate As New MySqlCommand(queryUpdate, conn, transaction)
+                            cmdUpdate.Parameters.AddWithValue("@jumlah", jumlah)
+                            cmdUpdate.Parameters.AddWithValue("@laptopId", laptopId)
+                            cmdUpdate.ExecuteNonQuery()
+                        End Using
+
+                        transaction.Commit()
+                        Return True
+                    Catch ex As Exception
+                        transaction.Rollback()
+                        Return False
+                    End Try
+                End Using
+            End Using
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 
     Public Function GetLaptops() As DataTable
@@ -146,4 +221,29 @@ Module DataModule
             End Using
         End Using
     End Sub
+    Public Function GetTransaksi() As DataTable
+        Dim dt As New DataTable()
+        Using conn = GetConnection()
+            Dim query As String = "SELECT t.id_transaksi AS ID, u.username AS Member, l.nama AS Laptop, t.jumlah_beli AS Qty, t.total_harga AS Total, t.tanggal_pembelian AS Tanggal FROM transaksi t JOIN users u ON t.id_user = u.id JOIN laptops l ON t.id_laptop = l.id ORDER BY t.tanggal_pembelian DESC"
+            Using cmd As New MySqlCommand(query, conn)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    Public Function GetLaporanPenjualan() As DataTable
+        Dim dt As New DataTable()
+        Using conn = GetConnection()
+            Dim query As String = "SELECT l.nama AS Produk, SUM(t.jumlah_beli) AS TotalUnit, SUM(t.total_harga) AS TotalHarga FROM transaksi t JOIN laptops l ON t.id_laptop = l.id GROUP BY l.nama ORDER BY TotalHarga DESC"
+            Using cmd As New MySqlCommand(query, conn)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
 End Module
