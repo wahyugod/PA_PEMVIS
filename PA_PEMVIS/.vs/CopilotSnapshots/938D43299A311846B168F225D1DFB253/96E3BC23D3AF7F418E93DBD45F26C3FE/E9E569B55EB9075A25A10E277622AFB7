@@ -1,4 +1,4 @@
-Imports MySqlConnector
+﻿Imports MySqlConnector
 
 Module DataModule
     Public LoggedInUserId As Integer
@@ -27,24 +27,12 @@ Module DataModule
     Public Function RegisterUser(username As String, password As String) As String
         Try
             Using conn = GetConnection()
-                conn.Open()
-
-                ' Check apakah username sudah ada
-                Dim checkQuery As String = "SELECT COUNT(*) FROM users WHERE username = @user"
-                Using cmdCheck As New MySqlCommand(checkQuery, conn)
-                    cmdCheck.Parameters.AddWithValue("@user", username)
-                    Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
-                    If count > 0 Then
-                        Return "Username sudah terdaftar. Silakan gunakan username lain."
-                    End If
-                End Using
-
-                ' Insert user baru
-                Dim insertQuery As String = "INSERT INTO users (username, password, role) VALUES (@user, @pass, 'member')"
-                Using cmdInsert As New MySqlCommand(insertQuery, conn)
-                    cmdInsert.Parameters.AddWithValue("@user", username)
-                    cmdInsert.Parameters.AddWithValue("@pass", password)
-                    cmdInsert.ExecuteNonQuery()
+                Dim query As String = "INSERT INTO users (username, password, role) VALUES (@user, @pass, 'member')"
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@user", username)
+                    cmd.Parameters.AddWithValue("@pass", password)
+                    conn.Open()
+                    cmd.ExecuteNonQuery()
                 End Using
             End Using
             Return ""
@@ -258,19 +246,6 @@ Module DataModule
         Using conn = GetConnection()
             Dim query As String = "SELECT l.nama AS Produk, SUM(t.jumlah_beli) AS TotalUnit, SUM(t.total_harga) AS TotalHarga FROM transaksi t JOIN laptops l ON t.id_laptop = l.id GROUP BY l.nama ORDER BY TotalHarga DESC"
             Using cmd As New MySqlCommand(query, conn)
-                Using adapter As New MySqlDataAdapter(cmd)
-                    adapter.Fill(dt)
-                End Using
-            End Using
-        End Using
-        Return dt
-    End Function
-    Public Function GetHistoriMember(userId As Integer) As DataTable
-        Dim dt As New DataTable()
-        Using conn = GetConnection()
-            Dim query As String = "SELECT t.id_transaksi AS ID, l.nama AS Laptop, t.jumlah_beli AS Qty, t.total_harga AS Total, t.tanggal_pembelian AS Tanggal FROM transaksi t JOIN laptops l ON t.id_laptop = l.id WHERE t.id_user = @userId ORDER BY t.tanggal_pembelian DESC"
-            Using cmd As New MySqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@userId", userId)
                 Using adapter As New MySqlDataAdapter(cmd)
                     adapter.Fill(dt)
                 End Using

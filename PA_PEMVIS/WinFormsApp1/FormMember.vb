@@ -14,7 +14,11 @@ Public Class FormMember
     End Sub
 
     Private Sub RefreshData()
-        dgvLaptops.DataSource = DataModule.GetAvailableLaptops()
+        Dim dt As DataTable = DataModule.GetAvailableLaptops()
+        dgvLaptops.DataSource = dt
+        If dgvLaptops.Columns.Contains("ID") Then
+            dgvLaptops.Columns("ID").Visible = False
+        End If
         ClearForm()
     End Sub
 
@@ -76,5 +80,11 @@ Public Class FormMember
         Dim loginForm As New FormLogin()
         loginForm.Show()
         Me.Close()
+    End Sub
+
+    Private Sub btnHistori_Click(sender As Object, e As EventArgs) Handles btnHistori.Click
+        Dim historiForm As New FormHistoriMember()
+        historiForm.Show()
+        Me.Hide()
     End Sub
 End Class

@@ -26,6 +26,7 @@ Partial Class FormMember
         txtStok = New Guna.UI2.WinForms.Guna2TextBox()
         numJumlah = New Guna.UI2.WinForms.Guna2NumericUpDown()
         btnBeli = New Guna.UI2.WinForms.Guna2Button()
+        btnHistori = New Guna.UI2.WinForms.Guna2Button()
         btnLogout = New Guna.UI2.WinForms.Guna2Button()
         lblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lblMerk = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -60,6 +61,18 @@ Partial Class FormMember
         btnLogout.Size = New Size(120, 36)
         btnLogout.TabIndex = 1
         btnLogout.Text = "Logout"
+        ' 
+        ' btnHistori
+        ' 
+        btnHistori.BorderRadius = 8
+        btnHistori.FillColor = Color.FromArgb(CByte(45), CByte(53), CByte(73))
+        btnHistori.Font = New Font("JetBrains Mono", 9F, FontStyle.Bold)
+        btnHistori.ForeColor = Color.White
+        btnHistori.Location = New Point(950, 24)
+        btnHistori.Name = "btnHistori"
+        btnHistori.Size = New Size(120, 36)
+        btnHistori.TabIndex = 2
+        btnHistori.Text = "Histori"
         ' 
         ' pnlMain
         ' 
@@ -229,6 +242,7 @@ Partial Class FormMember
         BackColor = Color.FromArgb(CByte(248), CByte(249), CByte(255))
         ClientSize = New Size(1280, 800)
         Controls.Add(pnlMain)
+        Controls.Add(btnHistori)
         Controls.Add(btnLogout)
         Controls.Add(lblTitle)
         FormBorderStyle = FormBorderStyle.None
@@ -250,6 +264,7 @@ Partial Class FormMember
     Friend WithEvents txtStok As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents numJumlah As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents btnBeli As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnHistori As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblMerk As Guna.UI2.WinForms.Guna2HtmlLabel

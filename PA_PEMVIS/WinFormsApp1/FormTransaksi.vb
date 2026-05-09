@@ -67,9 +67,9 @@ Public Class FormTransaksi
         ' Header
         e.Graphics.DrawString("TOKO WAHYU TECH", fontHeader, Brushes.Black, x, y)
         y += 30
-        e.Graphics.DrawString("Jl. Suryanata, Samarinda, Kalimantan Timur, 75124", fontSub, Brushes.Black, x, y)
+        e.Graphics.DrawString("Jl. Batu Cermin, Samarinda, Kalimantan Timur, 75123", fontSub, Brushes.Black, x, y)
         y += 20
-        e.Graphics.DrawString("Telp: 08123456789", fontSub, Brushes.Black, x, y)
+        e.Graphics.DrawString("Telp: 085753039151", fontSub, Brushes.Black, x, y)
         y += 30
         
         ' Line

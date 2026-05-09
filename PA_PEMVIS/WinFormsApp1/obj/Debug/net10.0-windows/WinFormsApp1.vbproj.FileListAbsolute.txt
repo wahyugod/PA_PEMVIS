@@ -26,3 +26,5 @@ D:\PA_PEMVIS\PA_PEMVIS\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.FormL
 D:\PA_PEMVIS\PA_PEMVIS\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.FormProduk.resources
 D:\PA_PEMVIS\PA_PEMVIS\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.FormMerk.resources
 D:\PA_PEMVIS\PA_PEMVIS\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.FormRegister.resources
+D:\PA_PEMVIS\PA_PEMVIS\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.FormMember.resources
+D:\PA_PEMVIS\PA_PEMVIS\WinFormsApp1\obj\Debug\net10.0-windows\WinFormsApp1.FormTransaksi.resources
